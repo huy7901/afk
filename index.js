@@ -32,6 +32,11 @@ bot.on('login',function(){
 	bot.chat("hello");
 });
 
+bot.on('time', function(time) {
+	if(nightskip == "false"){
+	if(bot.time.timeOfDay >= 1){
+	bot.chat('welcome!')
+	}}
     if (connected <1) {
         return;
     }
@@ -66,4 +71,3 @@ bot.on('spawn',function() {
 bot.on('death',function() {
     bot.emit("respawn")
 });
-
